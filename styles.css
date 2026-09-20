@@ -1,0 +1,309 @@
+/* ==========================================================================
+   Apex Fitness & Wellness Center — styles.css
+   Design system: 3 main colors, 2 font families, mobile-first + Flexbox
+   ========================================================================== */
+
+/* --- Fonts ------------------------------------------------------------- */
+/* Loaded via <link> in each HTML <head>:
+   Montserrat (headings) + Open Sans (body text) */
+
+/* --- Design tokens ------------------------------------------------------ */
+:root {
+  /* Color palette (2-4 main colors) */
+  --color-navy: #1B2A41;      /* primary — header, footer, nav, headings */
+  --color-orange: #F26B38;    /* accent — buttons, links, highlights     */
+  --color-light: #F4F5F7;     /* neutral background for sections/cards   */
+  --color-white: #FFFFFF;
+  --color-text: #2D2D2D;      /* body text, high contrast on light bg    */
+
+  /* Typography */
+  --font-heading: 'Montserrat', 'Segoe UI', sans-serif;
+  --font-body: 'Open Sans', Arial, sans-serif;
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  --radius: 8px;
+  --max-width: 1100px;
+}
+
+/* --- Reset / base -------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+a {
+  color: var(--color-orange);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-navy);
+  line-height: 1.25;
+  margin-bottom: var(--space-sm);
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+p {
+  margin-bottom: var(--space-sm);
+  max-width: 65ch; /* keeps line length scannable/readable */
+}
+
+ul {
+  margin-bottom: var(--space-sm);
+  padding-left: 1.25rem;
+}
+
+/* --- Layout helpers (Flexbox) -------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+}
+
+main section {
+  background-color: var(--color-light);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* --- Header / Nav (mobile-first: stacked) -------------------------------- */
+header {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  padding: var(--space-sm);
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xs);
+}
+
+header h1 {
+  color: var(--color-white);
+  font-size: 1.3rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+}
+
+nav a {
+  display: block;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius);
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--color-orange);
+  text-decoration: none;
+}
+
+/* --- Footer --------------------------------------------------------------- */
+footer {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--space-md) var(--space-sm);
+  font-size: 0.85rem;
+}
+
+/* --- Figures / images ------------------------------------------------------ */
+figure {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+figcaption {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--color-navy);
+}
+
+/* --- Video -------------------------------------------------------------- */
+video {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* --- Buttons / CTAs -------------------------------------------------------- */
+button,
+.btn {
+  font-family: var(--font-heading);
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border: none;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: opacity 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* --- Forms ---------------------------------------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+fieldset {
+  border: 1px solid var(--color-navy);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  background-color: var(--color-white);
+}
+
+legend {
+  font-family: var(--font-heading);
+  color: var(--color-navy);
+  font-weight: 700;
+  padding: 0 var(--space-xs);
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: var(--space-xs);
+  border: 1px solid #C7CCD1;
+  border-radius: var(--radius);
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 1px;
+}
+
+/* --- Responsive: larger screens ------------------------------------------- */
+@media (min-width: 800px) {
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    width: auto;
+  }
+
+  main {
+    padding: var(--space-xl) 0;
+  }
+
+  main section {
+    padding: var(--space-lg);
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Two-column layout for sections that pair text with an image/figure.
+     Applied via the .feature class rather than :has() so it renders
+     consistently across browsers. */
+  main section.feature {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  main section.feature .feature-text {
+    flex: 1;
+  }
+
+  main section.feature figure,
+  main section.feature picture {
+    flex: 1;
+  }
+
+}

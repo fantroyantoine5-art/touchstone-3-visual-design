@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Fitness &amp; Wellness Center - Contact Us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <section>
+    <h2>Get Started Today</h2>
+    <p>Ready to take the first step? Fill out the form below to schedule your free initial consultation and facility walkthrough.</p>
+
+    <form action="#" method="POST">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <div>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required placeholder="John Doe">
+        </div>
+
+        <div>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required placeholder="name@example.com">
+        </div>
+
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Membership Preferences</legend>
+
+        <div>
+          <label for="interest">Primary Area of Interest:</label>
+          <select id="interest" name="interest" required>
+            <option value="">--Please choose an option--</option>
+            <option value="training">Personal Training</option>
+            <option value="classes">Group Fitness Classes</option>
+            <option value="nutrition">Nutritional Counseling</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="comments">Additional Notes or Goals:</label>
+          <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Tell us about your fitness goals..."></textarea>
+        </div>
+      </fieldset>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>&copy; 2026 Apex Fitness &amp; Wellness Center. All rights reserved.</p>
+</footer>
+</body>
+</html>
