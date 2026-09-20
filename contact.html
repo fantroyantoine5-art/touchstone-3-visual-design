@@ -27,23 +27,27 @@
     <h2>Get Started Today</h2>
     <p>Ready to take the first step? Fill out the form below to schedule your free initial consultation and facility walkthrough.</p>
 
-    <form action="#" method="POST">
+    <form id="consultation-form" action="#" method="POST" novalidate>
+      <p id="form-success" class="success-text" role="status"></p>
       <fieldset>
         <legend>Personal Information</legend>
 
         <div>
           <label for="fullname">Full Name:</label>
-          <input type="text" id="fullname" name="fullname" required placeholder="John Doe">
+          <input type="text" id="fullname" name="fullname" placeholder="John Doe" aria-describedby="fullname-error">
+          <span id="fullname-error" class="error-text"></span>
         </div>
 
         <div>
           <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required placeholder="name@example.com">
+          <input type="email" id="email" name="email" placeholder="name@example.com" aria-describedby="email-error">
+          <span id="email-error" class="error-text"></span>
         </div>
 
         <div>
           <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+          <input type="tel" id="phone" name="phone" placeholder="123-456-7890" aria-describedby="phone-error">
+          <span id="phone-error" class="error-text"></span>
         </div>
       </fieldset>
 
@@ -52,7 +56,7 @@
 
         <div>
           <label for="interest">Primary Area of Interest:</label>
-          <select id="interest" name="interest" required>
+          <select id="interest" name="interest">
             <option value="">--Please choose an option--</option>
             <option value="training">Personal Training</option>
             <option value="classes">Group Fitness Classes</option>
@@ -73,5 +77,7 @@
 <footer>
   <p>&copy; 2026 Apex Fitness &amp; Wellness Center. All rights reserved.</p>
 </footer>
+<script src="storage.js"></script>
+<script src="validate.js"></script>
 </body>
 </html>
