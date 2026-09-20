@@ -4,14 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apex Fitness &amp; Wellness Center - Services</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
 <header>
   <div class="container">
     <h1>Our Fitness Services</h1>
+
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -22,47 +27,113 @@
     </nav>
   </div>
 </header>
+
 <main class="container">
+
   <section class="feature">
+
     <div class="feature-text">
       <h2>Tailored Programs for Every Goal</h2>
-      <p>Whether you want to build strength, improve cardiovascular health, or recover from an injury, our professional staff is here to guide you every step of the way.</p>
+
+      <p>
+        Whether you want to build strength, improve cardiovascular health,
+        or recover from an injury, our professional staff is here to guide
+        you every step of the way.
+      </p>
+
       <ul>
-        <li><strong>One-on-One Personal Training:</strong> Customized workout routines designed specifically for your body and targets.</li>
-        <li><strong>Group Fitness Classes:</strong> High-energy yoga, spin, and HIIT classes led by certified instructors.</li>
-        <li><strong>Nutritional Counseling:</strong> Expert guidance to fuel your body properly for maximum performance.</li>
+        <li>
+          <strong>One-on-One Personal Training:</strong>
+          Customized workout routines designed specifically for your body and targets.
+        </li>
+
+        <li>
+          <strong>Group Fitness Classes:</strong>
+          High-energy yoga, spin, and HIIT classes led by certified instructors.
+        </li>
+
+        <li>
+          <strong>Nutritional Counseling:</strong>
+          Expert guidance to fuel your body properly for maximum performance.
+        </li>
       </ul>
     </div>
+
     <figure>
-      <img src="images/personal-training.jpg" alt="A personal trainer closely assisting a client with correct form during a dumbbell exercise.">
-      <figcaption>Our certified trainers provide individual attention to ensure safe, effective workouts.</figcaption>
+      <img
+        src="personal-training.jpg"
+        alt="A personal trainer closely assisting a client with correct form during a dumbbell exercise."
+      >
+
+      <figcaption>
+        Our certified trainers provide individual attention to ensure safe, effective workouts.
+      </figcaption>
     </figure>
+
   </section>
 
-  <section id="class-feature">
-    <h2>Build Your Fitness Plan</h2>
-    <p>Browse our class schedule, filter by type, and add classes to your personal plan. Your picks are saved in this browser, and we'll use them to suggest an interest when you fill out the consultation form.</p>
 
-    <div class="filter-bar" role="group" aria-label="Filter classes by category">
-      <button type="button" class="filter-btn active" data-category="all">All Classes</button>
-      <button type="button" class="filter-btn" data-category="cardio">Cardio</button>
-      <button type="button" class="filter-btn" data-category="strength">Strength</button>
-      <button type="button" class="filter-btn" data-category="recovery">Recovery</button>
+  <!-- Touchstone 4 Interactive Feature -->
+  <section id="class-feature">
+
+    <h2>Build Your Fitness Plan</h2>
+
+    <p>
+      Browse our class schedule, filter by type, and add classes to your
+      personal plan. Your picks are saved in this browser, and we'll use
+      them to suggest an interest when you fill out the consultation form.
+    </p>
+
+    <div
+      class="filter-bar"
+      role="group"
+      aria-label="Filter classes by category"
+    >
+      <button type="button" class="filter-btn active" data-category="all">
+        All Classes
+      </button>
+
+      <button type="button" class="filter-btn" data-category="cardio">
+        Cardio
+      </button>
+
+      <button type="button" class="filter-btn" data-category="strength">
+        Strength
+      </button>
+
+      <button type="button" class="filter-btn" data-category="recovery">
+        Recovery
+      </button>
     </div>
 
     <div id="class-list" class="class-grid"></div>
 
     <div class="plan-box">
-      <h3>My Fitness Plan (<span id="plan-count">0</span>)</h3>
-      <p id="plan-empty">You haven't added any classes yet — pick a few above to build your plan.</p>
+
+      <h3>
+        My Fitness Plan (<span id="plan-count">0</span>)
+      </h3>
+
+      <p id="plan-empty">
+        You haven't added any classes yet — pick a few above to build your plan.
+      </p>
+
       <ul id="plan-list"></ul>
+
     </div>
+
   </section>
+
 </main>
+
 <footer>
-  <p>&copy; 2026 Apex Fitness &amp; Wellness Center. All rights reserved.</p>
+  <p>
+    &copy; 2026 Apex Fitness &amp; Wellness Center. All rights reserved.
+  </p>
 </footer>
+
 <script src="storage.js"></script>
 <script src="feature.js"></script>
+
 </body>
 </html>
